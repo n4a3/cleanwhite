@@ -1,0 +1,38 @@
+.first
+  padding-top: 30vh
+  box-sizing: border-box
+  height: 100vh
+  background-image: url('/img/bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  @media (max-width: 568px)
+    padding-top: 20vh
+
+  &__heading
+    &::after
+      content: none
+
+  .button_down
+    position: relative
+    display: inline-block
+    margin-top: 30vh
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #fff
+    font-size: 0
+    border: none
+    box-shadow: 0px 2px 4px 0px rgba(0, 1, 1, 0.2)
+    @media (max-width: 568px)
+      margin-top: 20vh
+    &::before
+      position: absolute
+      content: ''
+      display: block
+      width: 80px
+      height: 80px
+      border-radius: 50%
+      top: -15px
+      left: -15px
+      background: rgba(255, 255, 255, 0.5) url('/img/arrow-down.svg') no-repeat center
