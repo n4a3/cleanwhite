@@ -5,7 +5,7 @@ buttonDown.addEventListener('click', function (e) {
   
   var blockID = buttonDown.getAttribute('href');
   
-  document.querySelector('' + blockID).scrollIntoView({
+  document.querySelector(blockID).scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });
