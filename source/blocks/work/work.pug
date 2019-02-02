@@ -1,0 +1,18 @@
+mixin g_item(name)
+  a.gallery__item(href="#", title=name)
+    img.gallery__pic(src="./img/gallery/"+name+".jpg")
+
+
+section.work.content-wrapper#work
+  h1.heading Featured Work
+  p.text.work__text Here you can find some of our latest works, to see the details of these works just click the thumbnails below.
+  section.gallery
+    +g_item("Pillter")
+    +g_item("Touchmania")
+    +g_item("Locate")
+    +g_item("Umberapp")
+    +g_item("Hipo")
+    +g_item("Pardio")
+    +g_item("Banadediki")
+    +g_item("BizCorner")
+    +g_item("Arabul")
