@@ -1,0 +1,46 @@
+mixin soc(href, title, tag)
+  li.soc__item(class="soc__item--"+tag)
+    a(href=href, title=title)
+      svg
+        use(xlink:href="#soc-"+tag)
+
+mixin t_item(name, position, soc)
+  .team__item
+    img.team__pic(src="./img/team/"+name+".jpg", alt=name)
+    p.team__name= name
+    p.team__pos= position
+    ul.team__soc.soc__list
+      each i in soc
+        case i[0]
+          when "tw"
+            +soc("https://twitter.com/"+i[1], "Twitter: @"+i[1], i[0])
+          when "sk"
+            +soc("skype:"+i[1]+"?chat", "Skype: "+i[1], i[0])
+          when "dr"
+            +soc("https://dribbble.com/"+i[1], "Dribbble: "+i[1], i[0])
+          when "in"
+            +soc(i[1], name+" on LinkedIn", i[0])
+          
+
+
+section.team.content-wrapper
+  h1.heading Team
+  p.text We are a hard working group, who's aim is to listen to your problems and to come up with the best solution possible. We follow the lates trends on the web to create custom talierd niche websites.
+  section.team__list
+    +t_item("Name Surname", "Lead Developer", [
+      ["tw", "twtest1"],
+      ["in", "https://www.linkedin.com/in/test1"]
+    ])
+    +t_item("Name Surnam", "Lead Developer", [
+      ["tw", "twtest2"],
+      ["dr", "drtest2"],
+      ["in", "https://www.linkedin.com/in/test2"]
+    ])
+    +t_item("Name Surna", "Lead Developer", [
+      ["sk", "echo123"],
+      ["in", "https://www.linkedin.com/in/test3"]
+    ])
+    +t_item("Name Surn", "Lead Developer", [
+      ["sk", "username"],
+      ["in", "https://www.linkedin.com/in/test4"]
+    ])
