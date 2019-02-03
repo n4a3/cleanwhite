@@ -167,7 +167,7 @@ gulp.task('serve', function() {
   gulp.watch('./source/**/*.{sass,scss}', gulp.series('css:watch'));
   gulp.watch('./source/**/*.js').on('change', gulp.series('js:watch', bs.reload));
   gulp.watch(['./source/assets/**/*.*', '!./source/assets/img/sprite/*.*'], gulp.series('assets:watch'));
-  gulp.watch('./source/assets/img/sprite/*.*', gulp.series('sprite'));
+  gulp.watch('./source/assets/img/sprite/*.*', gulp.series('sprite', 'html:watch'));
 });
 
 gulp.task('clean', function() {
