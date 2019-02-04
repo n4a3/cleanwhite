@@ -27,20 +27,22 @@ section.team.content-wrapper
   h1.heading Team
   p.text We are a hard working group, who's aim is to listen to your problems and to come up with the best solution possible. We follow the lates trends on the web to create custom talierd niche websites.
   section.team__list
-    +t_item("Name Surname", "Lead Developer", [
-      ["tw", "twtest1"],
-      ["in", "https://www.linkedin.com/in/test1"]
-    ])
-    +t_item("Name Surnam", "Lead Developer", [
-      ["tw", "twtest2"],
-      ["dr", "drtest2"],
-      ["in", "https://www.linkedin.com/in/test2"]
-    ])
-    +t_item("Name Surna", "Lead Developer", [
-      ["sk", "echo123"],
-      ["in", "https://www.linkedin.com/in/test3"]
-    ])
-    +t_item("Name Surn", "Lead Developer", [
-      ["sk", "username"],
-      ["in", "https://www.linkedin.com/in/test4"]
-    ])
+    .team__wrapper
+      +t_item("Name Surname", "Lead Developer", [
+        ["tw", "twtest1"],
+        ["in", "https://www.linkedin.com/in/test1"]
+      ])
+      +t_item("Name Surnam", "Lead Developer", [
+        ["tw", "twtest2"],
+        ["dr", "drtest2"],
+        ["in", "https://www.linkedin.com/in/test2"]
+      ])
+    .team__wrapper
+      +t_item("Name Surna", "Lead Developer", [
+        ["sk", "echo123"],
+        ["in", "https://www.linkedin.com/in/test3"]
+      ])
+      +t_item("Name Surn", "Lead Developer", [
+        ["sk", "username"],
+        ["in", "https://www.linkedin.com/in/test4"]
+      ])
