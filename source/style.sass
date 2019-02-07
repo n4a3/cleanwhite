@@ -1,0 +1,82 @@
+//fonts
+
+@font-face 
+  font-family: 'Gotham Pro'
+  src: local('Gotham Pro')
+  font-weight: normal
+  font-style: 400
+
+@font-face 
+  font-family: 'Gotham Pro'
+  src: local('Gotham Pro Medium')
+  font-weight: 500
+  font-style: normal
+
+@font-face 
+  font-family: 'Gotham Pro'
+  src: local('Gotham Pro Bold')
+  font-weight: 700
+  font-style: normal
+
+@font-face 
+  font-family: 'Proxima Nova'
+  src: local('Proxima Nova')
+  font-weight: 400
+  font-style: normal
+
+// globals
+
+html, body, ul, ol, li
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Gotham Pro', Helvetica, sans-serif
+
+ul 
+  list-style: none
+
+a
+  text-decoration: none
+
+.content-wrapper
+  padding: 0 150px
+  @media (max-width: 900px)
+    padding: 0 50px
+  @media (max-width: 568px)
+    padding: 0 10px
+
+// elements
+
+.heading
+  display: inline-block
+  font-size: 40px
+  font-weight: 700
+  line-height: 50px
+  text-transform: uppercase
+  color: #303030
+  &::after
+    display: block
+    content: ''
+    width: 75%
+    height: 6px
+    margin: 10px auto
+    background-color: #000000
+    transition: 0.5s cubic-bezier(0.165, 0.64, 0.44, 1)
+  &:hover
+    &::after
+      width: 100%
+      transition: 0.5s cubic-bezier(0.165, 0.64, 0.44, 1)
+
+.quote
+  font-family: Georgia, 'Times New Roman', Times, serif
+  font-style: italic
+  color: #5a5a5a
+
+.text
+  font-family: 'Proxima Nova', Helvetica, sans-serif
+  color: #5a5a5a
+  max-width: 600px
+  margin: 0 auto
+  margin-bottom: 50px
+  line-height: 25px

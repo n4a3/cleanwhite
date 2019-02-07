@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title whiteclean
+    // build:css
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/blocks/header/header.css")
+    link(rel="stylesheet", href="/css/blocks/nav/nav.css")
+    link(rel="stylesheet", href="/css/blocks/main/main.css")
+    link(rel="stylesheet", href="/css/blocks/first/first.css")
+    link(rel="stylesheet", href="/css/blocks/work/work.css")
+    link(rel="stylesheet", href="/css/blocks/team/team.css")
+    link(rel="stylesheet", href="/css/blocks/contact/contact.css")
+    link(rel="stylesheet", href="/css/blocks/footer/footer.css")
+    // endbuild
+    // build:js
+    script(src="/js/blocks/header/header.js" defer)
+    script(src="/js/blocks/first/first.js" defer)
+    script(src="/js/blocks/footer/footer.js" defer)
+    // endbuild
+  body
+    svg(style={display: 'none'})
+      include ../build/img/sprite.svg
+    include blocks/header/header
+    include blocks/main/main
+    include blocks/footer/footer
